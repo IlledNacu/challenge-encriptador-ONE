@@ -12,7 +12,11 @@ function limpiarCaja() {
 
 function deshabilitarNotFound() {
     let contenidoNotFound = document.getElementById("contenido-not-found");
-    contenidoNotFound.style.display = "none";
+    if (textoUsuario === "") {
+        contenidoNotFound.style.display = "block";
+    } else {
+        contenidoNotFound.style.display = "none";
+    }
 }
 
 function capturarTexto() {
