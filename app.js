@@ -1,37 +1,31 @@
 let textoUsuario;
 let textroTraducido;
 
-function asignarTextoElemento(texto){
+function asignarTextoElemento(texto) {
     let elementoHTML = document.getElementById("texto-traducido");
     elementoHTML.innerHTML = texto;
 }
 
-function habilitarTraduccion(){
-    let contenidoTraduccion = document.getElementById("texto-traducido");
-    contenidoTraduccion.style.display = "";
-}
-
-function limpiarCaja(){
+function limpiarCaja() {
     document.getElementById("texto-traducido").innerHTML = "";
 }
 
-function deshabilitarNotFound(){
+function deshabilitarNotFound() {
     let contenidoNotFound = document.getElementById("contenido-not-found");
     contenidoNotFound.style.display = "none";
 }
 
-function capturarTexto(){
+function capturarTexto() {
     textoUsuario = document.getElementById("textoUsuario").value;
 }
 
-function activarCaja(){
-    habilitarTraduccion();
+function activarCaja() {
     limpiarCaja();
-    deshabilitarNotFound();
     capturarTexto();
+    deshabilitarNotFound();
 }
 
-function codificar(texto){
+function codificar(texto) {
     textoCodificado = texto.replace(/e/g, "enter");
     textoCodificado = textoCodificado.replace(/i/g, "imes");
     textoCodificado = textoCodificado.replace(/a/g, "ai");
@@ -40,12 +34,12 @@ function codificar(texto){
     return textoCodificado;
 }
 
-function encriptar(){
+function encriptar() {
     let textoCodificado = codificar(textoUsuario);
     asignarTextoElemento(textoCodificado);
 }
 
-function decodificar(texto){
+function decodificar(texto) {
     textoDecodificado = texto.replace(/enter/g, "e");
     textoDecodificado = textoDecodificado.replace(/imes/g, "i");
     textoDecodificado = textoDecodificado.replace(/ai/g, "a");
@@ -54,12 +48,12 @@ function decodificar(texto){
     return textoDecodificado;
 }
 
-function desencriptar(){
+function desencriptar() {
     let textoDecodificado = decodificar(textoUsuario);
     asignarTextoElemento(textoDecodificado);
 }
 
-function copiar(){
+function copiar() {
     textoTraducido = document.getElementById("texto-traducido");
 
     // Creo un textarea temporal para copiar el texto porque el navegador no admite copiarlo directamente del p
