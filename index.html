@@ -14,19 +14,19 @@
 
 <body>
     <header>
-        <h1>Encriptador de texto Alura</h1>
+        <h1><a href="index.html">Encriptador de texto Alura</a></h1>
     </header>
     <main>
         <div class="transformador">
             <div class="caja-receptor">
-                <h2>Ingrese el texto aquí</h2>
+                <h2>Ingrese el texto a des/encriptar</h2>
                 <form>
-                    <textarea id="textoUsuario" placeholder="Escribe aquí..."></textarea>
+                    <textarea id="textoUsuario" placeholder="Escribir aquí..."></textarea>
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
                             <path
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
-                        </svg> Solo letras minúsculas y sin acentos</p>
+                        </svg> Solo letras minúsculas y sin tildes</p>
                     <div class="botonera">
                         <button type="button" class="encriptador" onclick="activarCaja();encriptar();">Encriptar</button>
                         <!--Cuando el usuario haga clic en el botón de encriptación, se mostrará el texto. Busca la propiedad style.property.-->
@@ -36,11 +36,11 @@
                 </form>
             </div>
             <div class="caja-devolucion">
-                <h2>Texto <strong>encriptado</strong></h2>
+                <h2>Texto <strong>des/encriptado</strong></h2>
                 <!--La idea es que el strong cambie según si la persona elige cifrar o descifrar a encriptado o desencriptado y esté invisible en un principio este <p>-->
                 <div class="contenido-not-found" id="contenido-not-found">
                     <img src="assets/2452502.jpg">
-                    <p><strong>Ningún mensaje fue encontrado</strong><br>Ingrese el texto que desees encriptar o
+                    <p><strong>Ningún mensaje fue encontrado</strong><br>Ingrese el texto que desee encriptar o
                         desencriptar.</p>
                 </div>
                 <p class="texto-traducido" id="texto-traducido" none></p>

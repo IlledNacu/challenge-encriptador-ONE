@@ -20,6 +20,14 @@ header{
     padding: 40px;
 }
 
+h1 a{
+    text-decoration: none;
+}
+
+h1 a:visited{
+    color: #FFFFFF;
+}
+
 h1{
     font-size: 36px;
     font-weight: bolder;
@@ -160,6 +168,7 @@ footer{
 
 .atribuciones{
     font-size: 16px;
+    margin-top: 5px;
 }
 
 .atribuciones a{
